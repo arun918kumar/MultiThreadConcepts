@@ -30,7 +30,7 @@ public class SemaPhoreTest implements CommandLineRunner {
     @PostConstruct()
     public void init(){
         executorService = Executors.newFixedThreadPool(20);
-        semaphore = new Semaphore(2);
+        semaphore = new Semaphore(2); // allow permit only to two threads at a time
     }
 
     @Override
