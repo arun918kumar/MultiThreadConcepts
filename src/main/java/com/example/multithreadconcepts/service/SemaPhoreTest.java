@@ -42,10 +42,10 @@ public class SemaPhoreTest implements CommandLineRunner {
     public Runnable runnable(int i) {
         return () -> {
             try {
-                semaphore.acquire();
+                semaphore.acquire(1); // get a permit
                 LOGGER.info("Api result for post {} : {} ", i, restTemplate.getForObject(API_URL + i, String.class));
-                Thread.sleep(5000);
-                semaphore.release();
+                Thread.sleep(5000);    // simulating a delay
+                semaphore.release();         // release the permit
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }
