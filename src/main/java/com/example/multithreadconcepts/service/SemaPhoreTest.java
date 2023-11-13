@@ -17,14 +17,10 @@ import java.util.stream.IntStream;
 public class SemaPhoreTest implements CommandLineRunner {
 
     private final Logger LOGGER = LoggerFactory.getLogger(SemaPhoreTest.class);
-
     @Autowired
     private RestTemplate restTemplate;
-
     private Semaphore semaphore;
-
     private final String API_URL = "https://jsonplaceholder.typicode.com/posts/";
-
     private  ExecutorService executorService;
 
     @PostConstruct()

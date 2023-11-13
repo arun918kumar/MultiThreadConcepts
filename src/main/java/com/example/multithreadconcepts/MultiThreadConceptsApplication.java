@@ -9,7 +9,7 @@ import org.springframework.web.client.RestTemplate;
 public class MultiThreadConceptsApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(MultiThreadConceptsApplication.class, args).close();
+		SpringApplication.run(MultiThreadConceptsApplication.class, args);
 	}
 
 	@Bean
